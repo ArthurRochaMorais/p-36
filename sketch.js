@@ -64,10 +64,11 @@ function readStock(data){
 
 function feedDog(){
   dog.addImage(happyDog);
-  foodS = foodS -1
+  var foodStockValue
+  foodStockValue = foodStockValue -1
   //write code here to update food stock and last fed time
   database.ref('/').update({
-    Comida = foodS
+    Comida = foodStockValue
   })
   database.ref('/').update({
     lastFed = time.hour()
